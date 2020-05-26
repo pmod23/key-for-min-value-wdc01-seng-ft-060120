@@ -3,9 +3,12 @@
 
 def key_for_min_value(name_hash)
 smallest_key = ""
-smallest_value = 99999
-name_hash.each do |e|
-  if(e)
+smallest_value = 999999
+name_hash.each do |key, value|
+  if(value < smallest_value)
+    smallest_value = value
+    smallest_key = key
+  end
 end
 
 smallest_key
